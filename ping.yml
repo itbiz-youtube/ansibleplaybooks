@@ -6,8 +6,8 @@
   hosts: all
   tasks:
     - name: ping
-        ansible.builtin.ping:
-          data: crash
+      ansible.builtin.ping:
+        data: crash
 
     - name: Get config for VyOS devices
       vyos.vyos.vyos_facts:
