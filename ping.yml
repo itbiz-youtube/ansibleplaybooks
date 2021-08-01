@@ -1,9 +1,5 @@
 ---
-- name: ping
-  connection: ansible.netcommon.network_cli
-  gather_facts: false
-  hosts: all
+- hosts: all
   tasks:
-    - name: ping
-      ansible.builtin.ping:
-        data: crash
+  - debug:
+      msg: "Hello world! Running job #{{ awx_job_id }} on {{ inventory_hostname }}"
