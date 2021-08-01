@@ -1,5 +1,5 @@
 ---
-
+#Tst
 - name: ping
   connection: ansible.netcommon.network_cli
   gather_facts: false
@@ -8,7 +8,7 @@
     - name: ping
         ansible.builtin.ping:
           data: crash
-          
+
     - name: Get config for VyOS devices
       vyos.vyos.vyos_facts:
         gather_subset: all
